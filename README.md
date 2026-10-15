@@ -28,6 +28,28 @@
 * **Topologia:** *
 * * **IPs rellevants:** 
   * `IP Principal`:
+network:
+    ethernets:
+        enp1s0:
+            dhcp4: true
+        enp2s0:
+            dhcp4: true
+        #kali
+        enp3s0:
+            dhcp4: false
+            addresses:
+              - 10.0.0.1/24
+        #dmz
+        enp4s0:
+            dhcp4: false
+            addresses:
+              - 192.168.10.1/24
+        #lan
+        enp5s0:
+            dhcp4: false
+            addresses:
+              - 192.168.20.1/24
+    version: 2
 
 ---
 
